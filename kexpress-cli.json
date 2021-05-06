@@ -1,0 +1,47 @@
+{
+  "wizard": {
+    "wizard": {
+      "author": "kinuxroot",
+      "wizard": "kexpress-standard"
+    },
+    "projectName": "individual-center-web",
+    "instance": {
+      "project": {
+        "name": "individual-center-web",
+        "version": "1.0.0-alpha.1",
+        "author": "lzl",
+        "license": "Apache-2.0",
+        "session": {
+          "secret": "~}ubrFR!L(b@(xfr"
+        },
+        "apps": [
+          {
+            "app": {
+              "name": "account",
+              "server": {
+                "port": 3002
+              }
+            },
+            "project": {
+              "name": "individual-center-web"
+            },
+            "template": {}
+          },
+          {
+            "app": {
+              "name": "object",
+              "server": {
+                "port": 3003
+              }
+            },
+            "project": {
+              "name": "individual-center-web"
+            },
+            "template": {}
+          }
+        ]
+      },
+      "template": {}
+    }
+  }
+}
