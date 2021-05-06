@@ -19,7 +19,7 @@
             "app": {
               "name": "account",
               "server": {
-                "port": 3002
+                "port": 3112
               }
             },
             "project": {
@@ -31,7 +31,7 @@
             "app": {
               "name": "object",
               "server": {
-                "port": 3003
+                "port": 3113
               }
             },
             "project": {
