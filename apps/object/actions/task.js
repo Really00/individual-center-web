@@ -325,8 +325,8 @@ const actionCreateTask = Action.Create({
     async handler(req, res, ctx) {
       const  { taskDao } = ctx.store.default;
       let where = {}
-      if (req.query.name) {
-          where['name'] = req.query.name;
+      if (req.query.id) {
+          where['id'] = req.query.id;
       }
 //      if (req.query.name) {
 //        where['name'] = req.query.name;
