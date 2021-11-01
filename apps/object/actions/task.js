@@ -224,6 +224,7 @@ const actionCreateTask = Action.Create({
               outparams[i]['value'] = path.join(home, outparams[i]['default']);
             }
         }
+        console.log(inputparams)
           const args = {
             inputparams: inputparams,
             outparams: outparams,
