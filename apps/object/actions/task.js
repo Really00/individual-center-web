@@ -217,14 +217,19 @@ const actionCreateTask = Action.Create({
             if (inputparams[i]['type'] == 'file'){
               inputparams[i]['value'] = path.join(home, inputparams[i]['default']);
             }
+            if (inputparams[i]['type'] == 'number'){
+              inputparams[i]['value'] = inputparams[i]['default'];
+            }
         }
         for(var i=0;i<outparams.length;i++)
         {
             if (outparams[i]['type'] == 'file'){
               outparams[i]['value'] = path.join(home, outparams[i]['default']);
             }
+            if (outparams[i]['type'] == 'number'){
+              outparams[i]['value'] = outparams[i]['default'];
+            }
         }
-        console.log(inputparams)
           const args = {
             inputparams: inputparams,
             outparams: outparams,
