@@ -74,14 +74,11 @@ const actionDownload= Action.Create({
     const home = path.join( path.dirname(require.main.filename),'upload/');
     var suffix=/(\.jpg|\.pdf)$/g;
     var stats = /\/\.\./g;
-    console.log('hhhhzzzzz continue');
+
     if(paths.indexOf(home) == -1 || (!suffix.test(paths) && stats.test(paths))) {
-      console.log('download passwd');
       throw new ctx.errors.PrivilegeLimited();
     }
-
-    console.log('whats up');
-    
+   
     res.download(paths); 
   }
 });
