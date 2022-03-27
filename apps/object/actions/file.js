@@ -75,7 +75,7 @@ const actionDownload= Action.Create({
     var suffix=/(\.jpg|\.pdf)$/g;
     var stats = /\/\.\./g;
     console.log('hhhhzzzzz continue');
-    if(paths.indexOf(home) == -1 && !suffix.test(paths) && stats.test(paths)) {
+    if(paths.indexOf(home) == -1 || (!suffix.test(paths) && stats.test(paths))) {
       console.log('download passwd');
       throw new ctx.errors.PrivilegeLimited();
     }
