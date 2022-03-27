@@ -72,9 +72,12 @@ const actionDownload= Action.Create({
     let paths = req.query.path;
     //文件按任务存储
     const home = path.join( path.dirname(require.main.filename),'upload/');
-    if(paths.indexOf(home) == -1) {
+    var suffix=/(\.jpg|\.pdf)$/g;
+    var stats = /\/\.\./g;
+    if(paths.indexOf(home) == -1 && !suffix.test(paths) && stats.test(paths)) {
       throw new ctx.errors.PrivilegeLimited();
     }
+    
     res.download(paths); 
   }
 });
